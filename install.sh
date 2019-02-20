@@ -12,7 +12,7 @@ sudo apt-get install -y yarn > /dev/null
 echo 'yarn version'
 yarn --version
 
-#zsh
+# zsh
 sudo apt-get install -y zsh
 
 # Oh-my-zsh:
@@ -29,3 +29,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# zsh-completions
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/shells:zsh-users:zsh-completions.list"
+sudo apt-get update
+sudo apt-get install zsh-completions
