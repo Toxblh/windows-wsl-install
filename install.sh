@@ -1,3 +1,6 @@
+# git
+sudo apt update && sudo apt install -y git
+
 # nodeJS
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - > /dev/null
 sudo apt-get install -y nodejs > /dev/null
