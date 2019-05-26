@@ -26,14 +26,14 @@ curl -s https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - > /dev/null
 echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
 ## ZSH
 
-if [ $UBUNTU_VERSION -eq "16.04" ]
+if [ $UBUNTU_VERSION = "16.04" ]
 then
 # 16.04
 curl -s https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_16.04/Release.key | apt-key add - > /dev/null
 echo "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_16.04/ /" > /etc/apt/sources.list.d/shells:zsh-users:zsh-completions.list
 fi
 
-if [ $UBUNTU_VERSION -eq "18.04" ]
+if [ $UBUNTU_VERSION = "18.04" ]
 then
 # 18.04
 curl -s https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_18.04/Release.key | apt-key add - > /dev/null
