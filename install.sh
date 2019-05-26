@@ -4,6 +4,10 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+# Check curl
+apt update > /dev/null
+apt install curl -y > /dev/null
+
 # Add PPA
 
 ## Python
