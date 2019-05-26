@@ -84,4 +84,4 @@ curl -s "https://raw.githubusercontent.com/Toxblh/windows-wsl-install/master/.zs
 # Change shell:
 chsh -s $(which zsh)
 
-exec ~/bin/zsh
+exec zsh
