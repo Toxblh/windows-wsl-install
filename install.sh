@@ -66,9 +66,6 @@ zsh --version
 # Oh-my-zsh:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Change shell:
-chsh -s $(which zsh)
-
 # powerlevel9k
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
@@ -80,3 +77,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # zsh-completions
 apt-get install zsh-completions
+
+# Copy .zshrc
+curl -s "https://raw.githubusercontent.com/Toxblh/windows-wsl-install/master/.zshrc" > ~/.zshrc
+
+# Change shell:
+chsh -s $(which zsh)
+
+exec ~/bin/zsh

@@ -5,8 +5,6 @@
 # Test:           echo $SHELL
 # Finish          zsh
 
-USER=toxblh
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/$USER/.oh-my-zsh"
 
