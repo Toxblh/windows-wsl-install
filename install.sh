@@ -6,6 +6,12 @@ fi
 
 UBUNTU_VERSION=`lsb_release -r | awk '{print $2}'`
 
+echo "==================================="
+echo "====      Toxblh WSL pack      ===="
+echo "==================================="
+
+echo "Initialise"
+
 # Check curl
 apt-get update > /dev/null
 apt-get install curl -y > /dev/null
@@ -81,7 +87,6 @@ apt-get install zsh-completions
 # Copy .zshrc
 curl -s "https://raw.githubusercontent.com/Toxblh/windows-wsl-install/master/.zshrc" > ~/.zshrc
 
-# Change shell:
-chsh -s $(which zsh)
+exec $(which zsh)
 
-exec zsh
+echo "Execute \"chsh -s $(which zsh)\" for change shell to zsh"
