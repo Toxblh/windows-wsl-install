@@ -17,3 +17,8 @@ if [ -t 1 ]; then
 exec zsh
 fi
 ```
+
+Or simple
+```shell
+wget -O - https://raw.githubusercontent.com/Toxblh/windows-wsl-install/master/install.sh | sudo bash
+```
