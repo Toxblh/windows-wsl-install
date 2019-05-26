@@ -87,6 +87,6 @@ apt-get install zsh-completions
 # Copy .zshrc
 curl -s "https://raw.githubusercontent.com/Toxblh/windows-wsl-install/master/.zshrc" > ~/.zshrc
 
-exec $(which zsh)
+exec "$(which zsh)"
 
 echo "Execute \"chsh -s $(which zsh)\" for change shell to zsh"
