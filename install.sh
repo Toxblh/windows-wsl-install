@@ -5,8 +5,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Check curl
-apt update > /dev/null
-apt install curl -y > /dev/null
+apt-get update > /dev/null
+apt-get install curl -y > /dev/null
 
 # Add PPA
 
@@ -14,7 +14,7 @@ apt install curl -y > /dev/null
 add-apt-repository ppa:deadsnakes/ppa -y > /dev/null
 
 ## NodeJS
-### curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - > /dev/null
+### curl -sL https://deb.nodesource.com/setup_10.x | -E bash - > /dev/null
 curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - > /dev/null
 echo 'deb https://deb.nodesource.com/node_10.x xenial main' > /etc/apt/sources.list.d/nodesource.list
 echo 'deb-src https://deb.nodesource.com/node_10.x xenial main' >> /etc/apt/sources.list.d/nodesource.list
@@ -27,25 +27,25 @@ curl -s https://download.opensuse.org/repositories/shells:zsh-users:zsh-completi
 echo "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_16.04/ /" > /etc/apt/sources.list.d/shells:zsh-users:zsh-completions.list
 
 # Update
-sudo apt-get update > /dev/null
+apt-get update > /dev/null
 
 # git
-sudo apt-get install -y git > /dev/null
+apt-get install -y git > /dev/null
 echo 'Git version'
 git --version
 
 # nodeJS
-sudo apt-get install -y nodejs > /dev/null
+apt-get install -y nodejs > /dev/null
 echo 'Node.JS version'
 node --version
 
 # yarn update
-sudo apt-get install -y yarn > /dev/null
+apt-get install -y yarn > /dev/null
 echo 'Yarn version'
 yarn --version
 
 # zsh
-sudo apt-get install -y zsh > /dev/null
+apt-get install -y zsh > /dev/null
 echo 'ZSH version'
 zsh --version
 
@@ -65,4 +65,4 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # zsh-completions
-sudo apt-get install zsh-completions
+apt-get install zsh-completions
