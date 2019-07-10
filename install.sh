@@ -49,6 +49,10 @@ fi
 # Update
 apt-get update > /dev/null
 
+#  ncurses-dev
+sudo apt-get install -y ncurses-dev build-essential > /dev/null
+echo 'Ncueses and Build Essential'
+
 # git
 apt-get install -y git > /dev/null
 echo 'Git version'
