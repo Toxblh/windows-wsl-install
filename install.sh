@@ -49,8 +49,11 @@ fi
 # Update
 apt-get update > /dev/null
 
+# Fira Code
+apt install fonts-firacode > /dev/null
+
 #  ncurses-dev
-sudo apt-get install -y ncurses-dev build-essential > /dev/null
+apt-get install -y ncurses-dev build-essential > /dev/null
 echo 'Ncueses and Build Essential'
 
 # git
