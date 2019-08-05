@@ -23,4 +23,4 @@ docker --version
 usermod -aG docker ${USER}
 su - ${USER}
 id -nG
-usermod -aG docker username
+usermod -aG docker ${USER}
