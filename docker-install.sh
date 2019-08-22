@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Alt 
+# curl -sSL https://get.docker.com | sh
+
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root"
    exit 1
