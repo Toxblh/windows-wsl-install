@@ -15,10 +15,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir rbenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator vcs time)
 
-
-# zsh-autosuggestions
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
 plugins=(
   git
 
@@ -29,6 +25,13 @@ plugins=(
 # zsh-syntax-highlighting
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   zsh-syntax-highlighting
+
+# zsh-users/zsh-completions
+# git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
+  zsh-completions
 )
+
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh

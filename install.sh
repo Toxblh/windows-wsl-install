@@ -30,21 +30,6 @@ echo 'deb-src https://deb.nodesource.com/node_10.x xenial main' >> /etc/apt/sour
 ## Yarn
 curl -s https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - > /dev/null
 echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
-## ZSH
-
-if [ $UBUNTU_VERSION = "16.04" ]
-then
-# 16.04
-curl -s https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_16.04/Release.key | apt-key add - > /dev/null
-echo "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_16.04/ /" > /etc/apt/sources.list.d/shells:zsh-users:zsh-completions.list
-fi
-
-if [ $UBUNTU_VERSION = "18.04" ]
-then
-# 18.04
-curl -s https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_18.04/Release.key | apt-key add - > /dev/null
-echo "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_18.04/ /" > /etc/apt/sources.list.d/shells:zsh-users:zsh-completions.list
-fi
 
 # Update
 apt-get update > /dev/null
@@ -89,7 +74,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # zsh-completions
-apt-get install zsh-completions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
 # Copy .zshrc
 curl -s "https://raw.githubusercontent.com/Toxblh/windows-wsl-install/master/.zshrc" > ~/.zshrc
